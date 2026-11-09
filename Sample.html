@@ -1,0 +1,751 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Local Service - Fast, Reliable & Trusted Solutions</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981', // Emerald primary accent
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-navy-900 text-slate-300 text-xs md:text-sm py-2 px-4 border-b border-slate-700">
+        <div class="max-w-7xl mx-auto flex justify-between items-center flex-wrap gap-2">
+            <div class="flex items-center gap-4">
+                <span class="inline-flex items-center text-emerald-400 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping mr-2"></span>
+                    Now Accepting New Bookings Today!
+                </span>
+                <span class="hidden sm:inline text-slate-400">| Serving Patna & Surrounding Areas</span>
+            </div>
+            <div class="flex items-center gap-6 text-xs">
+                <a href="tel:+919876543210" class="hover:text-white transition flex items-center gap-1.5 font-medium">
+                    <i class="fa-solid fa-phone text-emerald-400"></i> +91 98765 43210
+                </a>
+                <span class="hidden md:inline text-slate-400">Mon - Sat: 8:00 AM - 8:00 PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Business Niche Switcher -->
+                <div class="flex items-center gap-4">
+                    <a href="#" class="flex items-center gap-2 group">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center text-white text-xl font-bold shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                            <i id="navLogoIcon" class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <div>
+                            <span id="navBrandName" class="text-xl font-extrabold text-navy-900 tracking-tight block leading-tight">ApexCare</span>
+                            <span id="navTagline" class="text-xs font-semibold text-brand-600 tracking-wider uppercase block">Clinic & Healthcare</span>
+                        </div>
+                    </a>
+
+                    <!-- Preset Selector for Clients (Demo Customizer) -->
+                    <div class="hidden lg:flex items-center bg-slate-100 p-1 rounded-lg border border-slate-200 text-xs ml-4">
+                        <span class="text-slate-500 px-2 font-medium">Preset Demo:</span>
+                        <button onclick="switchPreset('clinic')" class="preset-btn px-2.5 py-1 rounded-md font-semibold text-slate-700 hover:bg-white transition bg-white shadow-xs">Clinic</button>
+                        <button onclick="switchPreset('gym')" class="preset-btn px-2.5 py-1 rounded-md font-medium text-slate-600 hover:bg-white transition">Gym</button>
+                        <button onclick="switchPreset('coaching')" class="preset-btn px-2.5 py-1 rounded-md font-medium text-slate-600 hover:bg-white transition">Academy</button>
+                        <button onclick="switchPreset('service')" class="preset-btn px-2.5 py-1 rounded-md font-medium text-slate-600 hover:bg-white transition">Services</button>
+                    </div>
+                </div>
+
+                <!-- Desktop Links -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                    <a href="#services" class="hover:text-brand-600 transition">Services</a>
+                    <a href="#why-us" class="hover:text-brand-600 transition">Why Choose Us</a>
+                    <a href="#testimonials" class="hover:text-brand-600 transition">Reviews</a>
+                    <a href="#faq" class="hover:text-brand-600 transition">FAQ</a>
+                </nav>
+
+                <!-- Urgent Action Buttons -->
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/919876543210" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-50 text-emerald-700 font-semibold border border-emerald-200 hover:bg-emerald-100 transition text-sm">
+                        <i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="#book-now" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-lg shadow-brand-600/30 hover:shadow-brand-600/40 hover:-translate-y-0.5 transition-all">
+                        <i class="fa-solid fa-calendar-check mr-2"></i> Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-b from-slate-900 via-navy-900 to-slate-900 text-white overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
+        <!-- Background Pattern Decorator -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Text Column -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    
+                    <!-- Trust Badge pill -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs md:text-sm text-slate-200 backdrop-blur-sm">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="font-bold text-white">4.9/5 Rating</span>
+                        <span class="text-slate-400">| 1,200+ Verified Local Reviews</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 id="heroHeadline" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Expert Local Healthcare You Can <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">Trust 100%</span>
+                    </h1>
+
+                    <!-- Benefit Subheadline -->
+                    <p id="heroSubheadline" class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Get top-tier medical consultation and specialized care without long waiting times. Same-day appointments available for you and your family.
+                    </p>
+
+                    <!-- Key Benefits Bullet List -->
+                    <div id="heroBullets" class="grid sm:grid-cols-2 gap-3 pt-2 text-left max-w-lg mx-auto lg:mx-0 text-slate-200 text-sm font-medium">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-brand-500 text-base"></i>
+                            <span>Certified & Experienced Specialists</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-brand-500 text-base"></i>
+                            <span>Instant Digital Confirmation</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-brand-500 text-base"></i>
+                            <span>No Hidden Fees or Extra Costs</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-brand-500 text-base"></i>
+                            <span>100% Satisfaction Guarantee</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Call Action Mobile/Desktop -->
+                    <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs sm:text-sm text-slate-400">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <span>Verified Local Provider</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <span>Response within 15 mins</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Lead Form Column -->
+                <div id="book-now" class="lg:col-span-5">
+                    <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 border border-slate-100 text-slate-800 relative">
+                        <!-- High Conversion Urgency Ribbon -->
+                        <div class="absolute -top-3 right-6 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-md">
+                            ⚡ Limited Slots Available Today
+                        </div>
+
+                        <div class="mb-6 text-center">
+                            <h3 id="formTitle" class="text-xl font-bold text-navy-900">Request an Instant Callback</h3>
+                            <p id="formSub" class="text-xs text-slate-500 mt-1">Fill out the quick form below for instant slot confirmation</p>
+                        </div>
+
+                        <!-- Lead Form -->
+                        <form id="leadCaptureForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Full Name *</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                                        <i class="fa-regular fa-user"></i>
+                                    </div>
+                                    <input type="text" required placeholder="e.g. Rahul Sharma" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm font-medium transition outline-none">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number (WhatsApp) *</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                                        <i class="fa-solid fa-phone-flip"></i>
+                                    </div>
+                                    <input type="tel" required pattern="[0-9]{10}" placeholder="10-digit mobile number" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm font-medium transition outline-none">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Service *</label>
+                                    <select id="formServiceSelect" required class="w-full py-3 px-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-xs sm:text-sm font-medium transition outline-none">
+                                        <option value="">Select Service</option>
+                                        <option value="General Consultation">General Consultation</option>
+                                        <option value="Specialist Checkup">Specialist Checkup</option>
+                                        <option value="Full Body Health Package">Full Body Health Package</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferred Date *</label>
+                                    <input type="date" required class="w-full py-3 px-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-xs sm:text-sm font-medium transition outline-none">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-brand-600 to-emerald-500 hover:from-brand-700 hover:to-emerald-600 text-white font-extrabold text-base shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 transition-all transform hover:-translate-y-0.5">
+                                Confirm My Slot Now <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+
+                            <p class="text-center text-[11px] text-slate-400 mt-2">
+                                <i class="fa-solid fa-lock mr-1"></i> Your personal details are 100% safe & private.
+                            </p>
+                        </form>
+
+                        <!-- Success Alert Message (Hidden initially) -->
+                        <div id="formSuccessMessage" class="hidden text-center py-8 space-y-3">
+                            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-navy-900">Request Received!</h4>
+                            <p class="text-xs text-slate-600">Thank you! Our executive will call you on your mobile within 15 minutes to confirm your appointment.</p>
+                            <button onclick="resetForm()" class="text-xs text-brand-600 font-bold underline">Submit another request</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS / PROOF COUNTER BAR -->
+    <section class="bg-white border-y border-slate-200 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-1">
+                    <p id="stat1Val" class="text-3xl sm:text-4xl font-extrabold text-navy-900">12,500+</p>
+                    <p id="stat1Lbl" class="text-xs sm:text-sm font-medium text-slate-500 uppercase tracking-wide">Happy Patients Treated</p>
+                </div>
+                <div class="space-y-1">
+                    <p id="stat2Val" class="text-3xl sm:text-4xl font-extrabold text-brand-600">15+ Yrs</p>
+                    <p id="stat2Lbl" class="text-xs sm:text-sm font-medium text-slate-500 uppercase tracking-wide">Clinical Experience</p>
+                </div>
+                <div class="space-y-1">
+                    <p id="stat3Val" class="text-3xl sm:text-4xl font-extrabold text-navy-900">4.9 ⭐</p>
+                    <p id="stat3Lbl" class="text-xs sm:text-sm font-medium text-slate-500 uppercase tracking-wide">Google Customer Rating</p>
+                </div>
+                <div class="space-y-1">
+                    <p id="stat4Val" class="text-3xl sm:text-4xl font-extrabold text-brand-600">100%</p>
+                    <p id="stat4Lbl" class="text-xs sm:text-sm font-medium text-slate-500 uppercase tracking-wide">Sanitized & Safe Clinic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES GRID SECTION -->
+    <section id="services" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Our Services</span>
+                <h2 id="servicesTitle" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">Top Specialized Care We Offer</h2>
+                <p id="servicesSub" class="text-slate-600 text-sm sm:text-base">Comprehensive services customized to ensure long-term wellbeing and peak results.</p>
+            </div>
+
+            <!-- Dynamic Services Container -->
+            <div id="servicesContainer" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards will be populated by Javascript based on preset -->
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US / TRUST SECTION -->
+    <section id="why-us" class="py-16 sm:py-24 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Why We Are #1</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">Why Hundreds Of Local Residents Choose Us Every Month</h2>
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">We combine modern technology, verified certified professionals, and personalized care to deliver outcomes that make a real difference in your life.</p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-600 flex items-center justify-center font-bold text-lg shrink-0">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-base">Certified & Licensed Experts</h4>
+                                <p class="text-slate-500 text-xs sm:text-sm mt-0.5">Every specialist on our team undergoes strict vetting and continuous professional training.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-600 flex items-center justify-center font-bold text-lg shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-base">Zero Waiting Time Guarantee</h4>
+                                <p class="text-slate-500 text-xs sm:text-sm mt-0.5">Your time is valuable. Booked appointments start promptly without annoying delays.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-600 flex items-center justify-center font-bold text-lg shrink-0">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-base">Transparent & Affordable Pricing</h4>
+                                <p class="text-slate-500 text-xs sm:text-sm mt-0.5">No surprise bills or hidden fees. We explain costs upfront before any procedure starts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 relative">
+                    <div class="relative mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-800">
+                        <img id="whyUsImage" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Clinic Interior" class="w-full h-[420px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent"></div>
+                        
+                        <!-- Floating Trust Card -->
+                        <div class="absolute bottom-6 left-6 right-6 p-4 glass-card rounded-2xl border border-white/40 shadow-lg">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xl font-bold">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-navy-900 text-sm">Official Local Quality Award Winner</p>
+                                    <p class="text-xs text-slate-500">Recognized for Excellence & Customer Service in 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-16 sm:py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Real Reviews</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">What Our Local Clients Say</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Don't just take our word for it — read feedback from real verified visitors in your town.</p>
+            </div>
+
+            <div id="testimonialsContainer" class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonials populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-3">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Got Questions?</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">Frequently Asked Questions</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Everything you need to know about booking and our services.</p>
+            </div>
+
+            <div id="faqContainer" class="space-y-4">
+                <!-- Accordions populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="bg-gradient-to-r from-brand-700 via-brand-600 to-emerald-600 text-white py-12 sm:py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">Ready To Experience The Best Local Service?</h2>
+            <p class="text-brand-100 max-w-2xl mx-auto text-sm sm:text-base">Book your slot today or call us directly. Our team is online and ready to assist you instantly.</p>
+            <div class="flex flex-wrap justify-center items-center gap-4 pt-2">
+                <a href="#book-now" class="px-8 py-3.5 rounded-xl bg-white text-navy-900 font-extrabold text-sm hover:bg-slate-100 shadow-xl transition transform hover:-translate-y-0.5">
+                    Book Appointment Online
+                </a>
+                <a href="tel:+919876543210" class="px-8 py-3.5 rounded-xl bg-navy-900 text-white font-extrabold text-sm hover:bg-navy-800 shadow-xl transition border border-slate-700">
+                    <i class="fa-solid fa-phone mr-2 text-emerald-400"></i> Call +91 98765 43210
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH MAP & DIRECT CONTACT -->
+    <footer class="bg-navy-900 text-slate-400 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-10 mb-12">
+                
+                <!-- Col 1: About Business -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white text-lg font-bold">
+                            <i id="footerLogoIcon" class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <span id="footerBrandName" class="text-xl font-bold text-white tracking-tight">ApexCare</span>
+                    </div>
+                    <p id="footerAbout" class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                        Providing top-quality services for families and professionals with a commitment to safety, transparency, and clinical excellence.
+                    </p>
+                    <div class="flex gap-3 text-slate-300">
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-brand-600 hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-brand-600 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-brand-600 hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Contact Details -->
+                <div class="lg:col-span-4 space-y-4">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Contact & Location</h4>
+                    <ul class="space-y-3 text-xs sm:text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-emerald-400 mt-1"></i>
+                            <span id="footerAddress" class="text-slate-300">Main Road, Boring Canal Rd, Near Krishna Temple, Patna, Bihar 800001</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-emerald-400"></i>
+                            <a href="tel:+919876543210" class="text-slate-300 hover:text-white transition">+91 98765 43210 / +91 91234 56789</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-emerald-400"></i>
+                            <span class="text-slate-300">contact@apexcarelocal.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-emerald-400"></i>
+                            <span class="text-slate-300">Mon - Sat: 8:00 AM - 8:00 PM (Sunday Closed)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Map Embed Placeholder -->
+                <div class="lg:col-span-4 space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Find Us On Google Maps</h4>
+                    <div class="w-full h-44 rounded-xl overflow-hidden border border-slate-700 bg-slate-800 relative">
+                        <!-- Embedded Google Map -->
+                        <iframe 
+                            title="Google Map Location"
+                            class="w-full h-full border-0 filter grayscale opacity-80 hover:grayscale-0 transition duration-300"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5113941724495!2d85.122805!3d25.612200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQzLjkiTiA4NcKwMDcnMjIxMi4xIkU!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; <span id="year">2026</span> ApexCare Local Business. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                    <a href="#" class="hover:text-slate-400">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PERSISTENT MOBILE CALL/WHATSAPP BOTTOM BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-2.5 z-40 flex gap-2 shadow-2xl">
+        <a href="tel:+919876543210" class="flex-1 py-2.5 rounded-xl bg-navy-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+            <i class="fa-solid fa-phone text-emerald-400"></i> Call Now
+        </a>
+        <a href="https://wa.me/919876543210" target="_blank" class="flex-1 py-2.5 rounded-xl bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+        </a>
+        <a href="#book-now" class="flex-1 py-2.5 rounded-xl bg-brand-600 text-white font-bold text-xs flex items-center justify-center gap-1">
+            <i class="fa-solid fa-calendar-check"></i> Book Slot
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT: Dynamic Data & Presets Switcher -->
+    <script>
+        // Preset Business Profiles Data (For quick client demonstration)
+        const presets = {
+            clinic: {
+                brand: "ApexCare Clinic",
+                tagline: "Medical & Diagnostic Center",
+                logoIcon: "fa-user-doctor",
+                heroHeadline: "Expert Healthcare & Dental Care You Can <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200'>Trust 100%</span>",
+                heroSubheadline: "Get top-tier medical consultation and specialized health checks without waiting hours. Certified doctors available daily.",
+                heroImage: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
+                servicesTitle: "Specialized Medical Services",
+                servicesSub: "Comprehensive healthcare solutions for you and your family.",
+                formServices: ["General Physician", "Dental Checkup & Cleaning", "Full Body Blood Test", "Pediatric Consultation"],
+                services: [
+                    { title: "General Doctor Consultation", desc: "Complete diagnosis, prescription, and health screening by experienced MD physicians.", price: "₹499", icon: "fa-user-doctor" },
+                    { title: "Advanced Dental Care", desc: "Pain-free teeth cleaning, root canal treatments, scaling, and cosmetic dentistry.", price: "₹799", icon: "fa-tooth" },
+                    { title: "Full Body Lab Package", desc: "Comprehensive 60+ parameter blood tests with home sample collection options.", price: "₹1,499", icon: "fa-vial" }
+                ],
+                testimonials: [
+                    { name: "Dr. Ananya Roy", role: "Local Resident", text: "Dr. Sharma was extremely patient and attentive. I got my appointment on time without any waiting line. Highly recommended!" },
+                    { name: "Vikram Malhotra", role: "Patient", text: "The cleanest clinic in Patna! The staff was very polite and their full-body health test report came on the same evening." },
+                    { name: "Meena Kumari", role: "Patient", text: "Brought my elderly mother for a dental consultation. Quick, affordable, and zero pain during treatment." }
+                ],
+                faqs: [
+                    { q: "Do I need an appointment beforehand?", a: "While walk-ins are welcome, booking online ensures zero waiting time and guaranteed slot with your chosen doctor." },
+                    { q: "Is emergency care available on weekends?", a: "Yes, our clinic remains open on Saturdays, and on-call emergency consultation is available on Sundays." },
+                    { q: "Are diagnostic lab reports delivered online?", a: "Yes, all test reports are emailed and sent via WhatsApp within 12-24 hours." }
+                ]
+            },
+            gym: {
+                brand: "IronFit Gym",
+                tagline: "Fitness & Strength Club",
+                logoIcon: "fa-dumbbell",
+                heroHeadline: "Transform Your Body With Local <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200'>Pro Fitness Trainers</span>",
+                heroSubheadline: "State-of-the-art equipment, personalized diet plans, and certified trainers to help you achieve your dream physique.",
+                heroImage: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
+                servicesTitle: "Workout Programs & Memberships",
+                servicesSub: "Custom training packages tailored to your personal health goals.",
+                formServices: ["Personal Training Trial", "Monthly Gym Membership", "Fat Loss Consultation", "Group Yoga & Cardio"],
+                services: [
+                    { title: "Personal Training Package", desc: "1-on-1 dedicated coach, customized workout routines, and weekly progress tracking.", price: "₹2,999/mo", icon: "fa-person-running" },
+                    { title: "Full Gym Access + Sauna", desc: "Unlimited access to cardio, heavy weights, resistance machines, and steam bath.", price: "₹1,200/mo", icon: "fa-dumbbell" },
+                    { title: "Customized Diet Plan", desc: "Nutrition program tailored to your body type, goals, and local food preferences.", price: "₹999", icon: "fa-apple-whole" }
+                ],
+                testimonials: [
+                    { name: "Rohan Verma", role: "Member (Lost 12 kg)", text: "IronFit changed my life! The trainers don't just sit around; they guide your form on every set." },
+                    { name: "Priya Singh", role: "Member", text: "Super safe and clean gym environment for women. Air conditioning is great and equipment is imported." },
+                    { name: "Amit Kumar", role: "Member", text: "Great community! Joined the personal training program 3 months ago and already seeing massive changes." }
+                ],
+                faqs: [
+                    { q: "Can I get a free trial session before joining?", a: "Yes! Fill out the booking form above to get a free 1-Day Trial Pass with a personal trainer." },
+                    { q: "What are the gym operating hours?", a: "We are open from 5:30 AM to 10:00 PM Monday through Saturday." },
+                    { q: "Are female trainers available?", a: "Yes, we have certified female fitness coaches available during morning and evening slots." }
+                ]
+            },
+            coaching: {
+                brand: "Pinnacle Academy",
+                tagline: "IIT-JEE / NEET / Board Prep",
+                logoIcon: "fa-graduation-cap",
+                heroHeadline: "Secure Top Rank In Entrance Exams With <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200'>Expert Mentors</span>",
+                heroSubheadline: "Small batch sizes, daily practice papers, and proven results by top educators in Patna.",
+                heroImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+                servicesTitle: "Courses Offered",
+                servicesSub: "Targeted batches designed for maximum score improvements.",
+                formServices: ["Class 10th/12th Boards", "IIT-JEE Foundation", "NEET Medical Coaching", "Free Demo Class Seat"],
+                services: [
+                    { title: "Class 11 & 12 Board Prep", desc: "Comprehensive Physics, Chemistry, Math & Biology coaching with NCERT focus.", price: "₹15,000/yr", icon: "fa-book-open" },
+                    { title: "IIT-JEE / NEET Intensive Batch", desc: "Advanced problem solving, weekly mock exams, and doubt-clearing sessions.", price: "₹25,000/yr", icon: "fa-flask" },
+                    { title: "Foundation Batch (Class 8-10)", desc: "Build strong fundamentals for competitive exams from an early age.", price: "₹12,000/yr", icon: "fa-brain" }
+                ],
+                testimonials: [
+                    { name: "Saurabh Kumar", role: "JEE Top Scorer", text: "The faculty at Pinnacle explains complex Physics concepts with simple real-life examples. Doubt classes helped immensely." },
+                    { name: "Neeta Kumari (Parent)", role: "Parent", text: "Regular feedback and test reports sent to parents. My daughter's marks improved by 35% within 4 months." },
+                    { name: "Aditya Prakash", role: "NEET Aspirant", text: "Small batch size means teachers actually pay attention to individual weaknesses." }
+                ],
+                faqs: [
+                    { q: "Is a free demo class available for new students?", a: "Yes! Book a free 2-day trial demo class by submitting the form above." },
+                    { q: "What is the average batch size?", a: "We limit every batch to 30 students to ensure proper personal attention." },
+                    { q: "Are study materials and mock tests included?", a: "Yes, printed books, daily DPPs, and weekly online/offline test series are included." }
+                ]
+            },
+            service: {
+                brand: "Apex Home Care",
+                tagline: "AC, Electrician & Plumbing",
+                logoIcon: "fa-screwdriver-wrench",
+                heroHeadline: "Fast & Reliable Home Services Delivered In <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200'>30 Minutes</span>",
+                heroSubheadline: "Certified technicians for AC repair, electrical fixes, plumbing, and deep home cleaning at fixed upfront prices.",
+                heroImage: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+                servicesTitle: "On-Demand Home Services",
+                servicesSub: "Verified local mechanics at your doorstep with 30-day service warranty.",
+                formServices: ["AC Repair / Servicing", "Electrician Visit", "Plumbing Fixing", "Full Home Deep Clean"],
+                services: [
+                    { title: "AC Service & Jet Clean", desc: "Deep high-pressure water cleaning, gas refill, and cooling leak inspection.", price: "₹499", icon: "fa-snowflake" },
+                    { title: "Electrical Repair & Wiring", desc: "Short circuit repair, switchboard installation, and appliance setup.", price: "₹199", icon: "fa-bolt" },
+                    { title: "Plumbing & Leakage Fix", desc: "Tap repair, pipe fitting, drainage unclogging, and bathroom fixture installation.", price: "₹249", icon: "fa-wrench" }
+                ],
+                testimonials: [
+                    { name: "Rajesh Mishra", role: "Homeowner", text: "The AC technician reached my home in Krishna Nagar within 25 minutes. Fixed the cooling issue quickly." },
+                    { name: "Sunita Sinha", role: "Resident", text: "Very polite electrician. Explained the rates before starting work. No hidden charges!" },
+                    { name: "Alok Nath", role: "Apartment Manager", text: "We use Apex Home Care for all our building maintenance. Reliable and honest technicians." }
+                ],
+                faqs: [
+                    { q: "How fast will the technician arrive?", a: "Our standard response time is 30 to 45 minutes anywhere in Patna." },
+                    { q: "Do you offer a warranty on repair work?", a: "Yes! All repairs come with an unconditional 30-day free re-service warranty." },
+                    { q: "How do I pay after service completion?", a: "You can pay via UPI (Google Pay/PhonePe), cash, or card after inspecting the work." }
+                ]
+            }
+        };
+
+        // Function to render active preset
+        function switchPreset(key) {
+            const data = presets[key];
+            if (!data) return;
+
+            // Highlight buttons
+            document.querySelectorAll('.preset-btn').forEach(btn => {
+                btn.classList.remove('bg-white', 'shadow-xs', 'font-semibold', 'text-slate-700');
+                btn.classList.add('text-slate-600', 'font-medium');
+            });
+            event.target.classList.add('bg-white', 'shadow-xs', 'font-semibold', 'text-slate-700');
+
+            // Update Header & Footer Brand
+            document.getElementById('navBrandName').innerText = data.brand;
+            document.getElementById('navTagline').innerText = data.tagline;
+            document.getElementById('footerBrandName').innerText = data.brand;
+            document.getElementById('navLogoIcon').className = `fa-solid ${data.logoIcon}`;
+            document.getElementById('footerLogoIcon').className = `fa-solid ${data.logoIcon}`;
+
+            // Update Hero Text
+            document.getElementById('heroHeadline').innerHTML = data.heroHeadline;
+            document.getElementById('heroSubheadline').innerText = data.heroSubheadline;
+            document.getElementById('whyUsImage').src = data.heroImage;
+
+            // Update Form Services Dropdown
+            const select = document.getElementById('formServiceSelect');
+            select.innerHTML = '<option value="">Select Service</option>';
+            data.formServices.forEach(srv => {
+                const opt = document.createElement('option');
+                opt.value = srv;
+                opt.textContent = srv;
+                select.appendChild(opt);
+            });
+
+            // Update Services Cards
+            document.getElementById('servicesTitle').innerText = data.servicesTitle;
+            document.getElementById('servicesSub').innerText = data.servicesSub;
+            const srvContainer = document.getElementById('servicesContainer');
+            srvContainer.innerHTML = data.services.map(s => `
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                            <i class="fa-solid ${s.icon}"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">${s.title}</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">${s.desc}</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] text-slate-400 font-bold uppercase block">Starting From</span>
+                            <span class="text-lg font-extrabold text-brand-600">${s.price}</span>
+                        </div>
+                        <a href="#book-now" class="px-4 py-2 rounded-lg bg-slate-100 hover:bg-brand-600 hover:text-white text-navy-900 font-bold text-xs transition">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+
+            // Update Testimonials
+            const testContainer = document.getElementById('testimonialsContainer');
+            testContainer.innerHTML = data.testimonials.map(t => `
+                <div class="bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-700/60 flex flex-col justify-between relative">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-xs sm:text-sm italic leading-relaxed">"${t.text}"</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-700/50 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm">
+                            ${t.name.charAt(0)}
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">${t.name}</h4>
+                            <span class="text-xs text-emerald-400">${t.role}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Update FAQs
+            const faqContainer = document.getElementById('faqContainer');
+            faqContainer.innerHTML = data.faqs.map((f, i) => `
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(${i})" class="w-full text-left p-5 font-bold text-navy-900 text-sm sm:text-base flex justify-between items-center gap-4 hover:bg-slate-50 transition">
+                        <span>${f.q}</span>
+                        <i id="faqIcon-${i}" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faqAns-${i}" class="hidden p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                        ${f.a}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Toggle FAQ Accordion
+        function toggleFaq(index) {
+            const ans = document.getElementById(`faqAns-${index}`);
+            const icon = document.getElementById(`faqIcon-${index}`);
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Handle Lead Form Submission
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('leadCaptureForm').classList.add('hidden');
+            document.getElementById('formSuccessMessage').classList.remove('hidden');
+        }
+
+        function resetForm() {
+            document.getElementById('leadCaptureForm').reset();
+            document.getElementById('leadCaptureForm').classList.remove('hidden');
+            document.getElementById('formSuccessMessage').classList.add('hidden');
+        }
+
+        // Initialize default preset on load
+        window.onload = function() {
+            switchPreset('clinic');
+            document.getElementById('year').innerText = new Date().getFullYear();
+        }
+    </script>
+</body>
+</html>
+```
